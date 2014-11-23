@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Edtwist</title>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+	$("#submitClick").click(function(){
+	var data = $('sampleform').serialize();
+	$.post("http://localhost/myaction",
+		{
+			link: $('#ajaxlink').val(),
+			userkey: $('#ajaxkey').val()
+		},
+		function(data,status){
+			alert(data);
+		});
+	});
+});
+	</script>
+</head>
+ <style type="text/css" media="screen">
+ html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+</style>
+
+<body>
+<h1>I will shorten your url!</h1>
+
+<form id='sampleform'>
+   LINK: <input id='ajaxlink' type='TEXT' name='hyperlink' > <br>
+   http://edtwist.com/<input id='ajaxkey' type='TEXT' name='key' /> <br>
+   <input id='submitClick' type='submit' name='Submit' value='Submit' />
+</form>
+
+</body>
+</html>
+
