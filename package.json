@@ -1,0 +1,9 @@
+{
+  "name": "demo1",
+  "description": "First Express app",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "~4.0.0"
+  }
+}
